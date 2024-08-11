@@ -112,6 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
             link: 'kontenblog/Quiz Game/index.html',
             icon: 'kontenblog/Quiz Game/quizgame.jpg' // Path ke ikon untuk postingan ini
         },
+        {
+            title: 'Live Chart Generator',
+            description: 'Live Chart Generator adalah alat yang memungkinkan pengguna untuk membuat grafik secara langsung. Dengan menggunakan Live Chart Generator, Anda dapat membuat grafik yang dinamis dan interaktif.',
+            link: 'kontenblog/Live Chart Generator/index.html',
+            icon: 'kontenblog/Live Chart Generator/livechartgenerator.jpg' // Path ke ikon untuk postingan ini
+        },
+        {
+            title: 'Gameboy Tetris',
+            description: 'Gameboy Tetris adalah versi permainan klasik Tetris yang dimainkan di konsol Gameboy. Dengan menggunakan Gameboy Tetris, Anda dapat mengingat kenangan masa kecil Anda.',
+            link: 'kontenblog/Gameboy Tetris/index.html',
+            icon: 'kontenblog/Gameboy Tetris/gameboytetris.jpg' // Path ke ikon untuk postingan ini
+        },
         // Tambahkan lebih banyak postingan sesuai kebutuhan
     ];
 
