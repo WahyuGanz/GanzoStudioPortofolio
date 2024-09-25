@@ -13,6 +13,30 @@ const products = [
         price: 'Rp 10.000'
     },
     {
+        image: 'kontenpenjualan/bundlealokfreefire.png',
+        title: 'Bundle Alok Free Fire',
+        description: 'Dapatkan bundle eksklusif untuk meningkatkan pengalaman bermain Free Fire Anda.',
+        price: 'Rp 50.000'
+    },
+    {
+        image: 'kontenpenjualan/remoteacmbakrara.png',
+        title: 'Remote AC Mbak Rara',
+        description: 'Remote AC yang nyaman dan mudah digunakan, cocok untuk ruang tamu atau kamar tidur.',
+        price: 'Rp 20.000'
+    },
+    {
+        image: 'kontenpenjualan/stickerhitam.jpg',
+        title: 'Stiker Orang Hitam',
+        description: 'Stiker lucu dan unik, cocok untuk hiasan laptop atau kamar. Gak hitam garansi uang kembali!',
+        price: 'Rp 5.000'
+    },
+    {
+        image: 'kontenpenjualan/esbatu.png',
+        title: 'Es Batu',
+        description: 'Laku ga laku tetap cair.',
+        price: 'Rp 5.000'
+    },
+    {
         image: 'kontenpenjualan/segomegono.png',
         title: 'Sego Megono',
         description: 'Sarapan Lur.',
