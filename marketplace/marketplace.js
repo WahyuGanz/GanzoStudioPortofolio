@@ -7,6 +7,12 @@ const products = [
         price: 'Gratis'
     },
     {
+        image: 'kontenpenjualan/gantungankuncifurina.png',
+        title: 'Gantungan Kunci Furina',
+        description: 'Gantungan kunci lucu dan unik, cocok untuk hadiah atau koleksi.',
+        price: 'Rp 10.000'
+    },
+    {
         image: 'kontenpenjualan/segomegono.png',
         title: 'Sego Megono',
         description: 'Sarapan Lur.',
@@ -23,6 +29,24 @@ const products = [
         title: 'Pecel Lele Lamongan',
         description: 'Pecel lele yang lezat dan autentik dari Lamongan, cocok untuk makan siang atau malam.',
         price: 'Rp 20.000'
+    },
+    {
+        image: 'kontenpenjualan/rendang.png',
+        title: 'Rendang',
+        description: 'Rendang yang lezat dan autentik, cocok untuk makan siang atau malam.',
+        price: 'Rp 25.000'
+    },
+    {
+        image: 'kontenpenjualan/pempek.jpeg',
+        title: 'Pempek',
+        description: 'Pempek yang gurih dan segar, sangat cocok untuk camilan atau hidangan utama.',
+        price: 'Rp 30.000'
+    },
+    {
+        image: 'kontenpenjualan/nasigoreng.jpg',
+        title: 'Nasi Goreng',
+        description: 'Nasi goreng yang lezat dan bergizi, sangat cocok untuk makan siang atau malam.',
+        price: 'Rp 10.000'
     },
     // Tambahkan produk lainnya di sini
 ];
