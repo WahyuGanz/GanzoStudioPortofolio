@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     outline: none;
@@ -8,21 +8,21 @@
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
     display: flex;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #18181B;
 }
 
-nav{
+nav {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
@@ -32,24 +32,24 @@ nav{
     gap: 2rem;
 }
 
-.nav-logo{
+.nav-logo {
     max-width: 100px;
 }
 
-.nav-links{
+.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
-.link a{
+.link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
 }
 
-.link a::after{
+.link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -60,11 +60,11 @@ nav{
     transition: all 0.3s ease;
 }
 
-.link a:hover::after{
+.link a:hover::after {
     width: 70%;
 }
 
-.btn{
+.btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -74,43 +74,23 @@ nav{
     transition: all 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #1e40af;
 }
 
-.btn-carapesan{
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #1d4ed8;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-kitamulai{
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #1d4ed8;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.container{
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
 }
 
-.blur{
+.blur {
     position: absolute;
     box-shadow: 0 0 1000px 50px #1d4ed8;
     z-index: -100;
 }
 
-header{
+header {
     position: relative;
     padding-top: 2rem;
     display: grid;
@@ -119,14 +99,15 @@ header{
     gap: 2rem;
 }
 
-header .content h4{
+header .content h4 {
     margin-bottom: 1rem;
     color: #ccc;
     font-size: 1rem;
     font-weight: 600;
 }
 
-header .content h1{
+
+header .content h1 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 3rem;
@@ -134,21 +115,21 @@ header .content h1{
     line-height: 4rem;
 }
 
-header .content h1 span{
+header .content h1 span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
 }
 
-header .content p{
+header .content p {
     margin-bottom: 2rem;
     color: #ccc;
 }
 
-header .image{
+header .image {
     position: relative;
 }
 
-header .image::before{
+header .image::before {
     content: "o";
     position: absolute;
     top: 0;
@@ -162,12 +143,12 @@ header .image::before{
     z-index: -100;
 }
 
-header .image img{
+header .image img {
     max-width: 600px;
     margin: auto;
 }
 
-section .header{
+section .header {
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
@@ -175,14 +156,14 @@ section .header{
     font-weight: 600;
 }
 
-.features{
+.features {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
-.features .card{
+.features .card {
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
@@ -190,12 +171,12 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.features .card:hover{
+.features .card:hover {
     background-color: #323232;
     border-color: #fff;
 }
 
-.features .card span{
+.features .card span {
     display: inline-block;
     background-color: #1e40af;
     padding: 2px 9px;
@@ -205,42 +186,42 @@ section .header{
     border-radius: 5px;
 }
 
-.features .card h4{
+.features .card h4 {
     margin-bottom: 0.5rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.features .card p{
+.features .card p {
     color: #ccc;
     margin-bottom: 1rem;
 }
 
-.features .card a{
+.features .card a {
     color: #fff;
     transition: all 0.3s ease;
 }
 
-.features .card a:hover{
+.features .card a:hover {
     color: #1e40af;
 }
 
-.sub-header{
+.sub-header {
     max-width: 600px;
     margin: auto;
     text-align: center;
     color: #ccc;
 }
 
-.pricing{
+.pricing {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.pricing .card{
+.pricing .card {
     padding: 3rem 2rem;
     background-color: #27272a;
     display: flex;
@@ -250,24 +231,24 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.pricing .card:hover{
+.pricing .card:hover {
     background-color: #323232;
     border-color: #fff;
 }
 
-.pricing .card .content{
+.pricing .card .content {
     flex: 1;
     margin-bottom: 2rem;
 }
 
-.pricing .card h4{
+.pricing .card h4 {
     margin-bottom: 1rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.pricing .card h3{
+.pricing .card h3 {
     color: #fff;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -276,52 +257,52 @@ section .header{
     border-bottom: 2px dashed #fff;
 }
 
-.pricing .card p{
+.pricing .card p {
     color: #fff;
     margin-bottom: 0.75rem;
 }
 
-.pricing .card p i{
+.pricing .card p i {
     color: #ccc;
     font-size: 1.2rem;
     margin-right: 0.3rem;
 }
 
-.pricing .card button{
+.pricing .card button {
     color: #fff;
     background-color: transparent;
     border: 2px solid #fff;
 }
 
-.pricing .card button:hover{
+.pricing .card button:hover {
     background-color: #1e40af;
     border-color: #1e40af;
 }
 
-footer{
+footer {
     position: relative;
     display: grid;
     grid-template-columns: 400px repeat(3, 1fr);
     gap: 2rem;
 }
 
-footer .column .logo{
+footer .column .logo {
     max-width: 100px;
     margin-bottom: 2rem;
 }
 
-footer .column p{
+footer .column p {
     color: #ccc;
     margin-bottom: 2rem;
 }
 
-footer .column .socials{
+footer .column .socials {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-footer .column .socials a{
+footer .column .socials a {
     color: #ccc;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -330,31 +311,31 @@ footer .column .socials a{
     transition: all 0.3s ease;
 }
 
-footer .column .socials a:hover{
+footer .column .socials a:hover {
     color: #fff;
     background-color: #1d4ed8;
     border-color: #1d4ed8;
 }
 
-footer .column h4{
+footer .column h4 {
     color: #fff;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-footer .column > a{
+footer .column > a {
     display: block;
     color: #ccc;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
-footer .column > a:hover{
+footer .column > a:hover {
     color: #1d4ed8;
 }
 
-.copyright{
+.copyright {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
@@ -363,9 +344,59 @@ footer .column > a:hover{
     text-align: center;
 }
 
-.bukansponsor {
+.konten {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.grub-konten {
     text-align: center;
-    color: red;
+    max-width: 200px;
+}
+
+.grub-konten img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.grub-konten p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.vision-mission {
+    margin-top: 4rem;
+    color: #ccc;
+}
+
+.vision-mission .header {
+    color: #1d4ed8;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.vision-mission p, .vision-mission ul {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.vision-mission ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-mission li {
+    margin-bottom: 1rem;
+}
+
+.judul-konten {
+    color: #1d4ed8;
+    
 }
 
 @media (width < 900px){
@@ -405,31 +436,4 @@ footer .column > a:hover{
     footer{
         grid-template-columns: 1fr 150px;
     }
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin: 16px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.btn {
-    background-color: #28a745; /* Contoh warna hijau */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #218838; /* Contoh warna hijau lebih gelap untuk hover */
 }
