@@ -1,39 +1,39 @@
-function scrollToElement(elementSelector, instance = 0) {
-    // Select all elements that match the given selector
-    const elements = document.querySelectorAll(elementSelector);
-    // Check if there are elements matching the selector and if the requested instance exists
-    if (elements.length > instance) {
-        // Scroll to the specified instance of the element
-        elements[instance].scrollIntoView({ behavior: 'smooth' });
+// Daftar warna yang digunakan
+const colors = ['black', 'blue', 'gray', 'red', 'yellow', 'green'];
+
+// Memilih warna target secara acak
+const randomIndex = Math.floor(Math.random() * colors.length);
+const targetColor = colors[randomIndex];
+
+// Mengubah tampilan warna target di halaman
+document.getElementById('target-color').style.backgroundColor = targetColor;
+
+function checkColor(selectedColor) {
+    // Periksa apakah warna yang dipilih pengguna sesuai dengan warna target
+    if (selectedColor === targetColor) {
+        // Jika pilihan benar, mulai hitungan mundur
+        startCountdown();  
+    } else {
+        alert("Verifikasi gagal! Silakan coba lagi.");
     }
 }
 
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', () => {
-        window.location.href = 'maintenance/maintenance.html';
-    });
-});
+function startCountdown() {
+    let countdown = 5; // Mulai dari 5 detik
+    const countdownElement = document.getElementById('countdown');
+    
+    // Tampilkan pop-up
+    const popup = document.getElementById('popup');
+    popup.style.display = 'flex'; // Menampilkan pop-up hanya setelah warna benar dipilih
 
-document.querySelector('.btn-gasrekrut').addEventListener('click', () => {
-    window.location.href = 'maintenance/maintenance.html';
-});
+    // Fungsi hitungan mundur
+    const interval = setInterval(() => {
+        countdown--;
+        countdownElement.textContent = `Mengarahkan dalam ${countdown} detik...`;
 
-
-
-const link1 = document.getElementById("link1");
-const link2 = document.getElementById("link2");
-const link3 = document.getElementById("link3");
-
-link1.addEventListener('click', () => {
-    scrollToElement('.header');
-});
-
-link2.addEventListener('click', () => {
-    // Scroll to the second element with "header" class
-    scrollToElement('.header', 1);
-});
-
-link3.addEventListener('click', () => {
-    scrollToElement('.column');
-});
-
+        if (countdown === 0) {
+            clearInterval(interval);
+            window.location.href = "beranda/index.html"; // Arahkan ke URL tujuan
+        }
+    }, 1000); // Setiap 1 detik
+}
