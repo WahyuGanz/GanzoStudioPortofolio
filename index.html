@@ -24,7 +24,7 @@
             height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
-            font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+            font-family: 'Poppins', sans-serif;
         }
         .container {
             text-align: center;
@@ -46,8 +46,8 @@
             cursor: pointer;
         }
         /* Pop-up styling */
-        #popup {
-            display: none; /* Sembunyikan pop-up secara default */
+        #popup, #wrong-popup {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -57,15 +57,15 @@
             justify-content: center;
             align-items: center;
         }
-        #popup-content {
+        #popup-content, #wrong-popup-content {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            font-weight: 500; /* Mengatur ketebalan font di dalam pop-up */
+            font-weight: 500;
         }
         p {
-            font-weight: 400; /* Menambahkan ketebalan standar untuk paragraf */
+            font-weight: 400;
         }
     </style>
 </head>
@@ -73,7 +73,7 @@
 
 <div class="container">
     <div id="target-color"></div>
-    <p>Jika Anda manusia, klik warna yang serupa</p>
+    <p>Jika Anda manusia, klik pada warna yang serupa</p>
     <div class="color-options">
         <div class="color-box" style="background-color: black;" onclick="checkColor('black')"></div>
         <div class="color-box" style="background-color: blue;" onclick="checkColor('blue')"></div>
@@ -84,10 +84,17 @@
     </div>
 </div>
 
-<!-- Pop-up untuk hitungan mundur -->
+<!-- Pop-up untuk hitungan mundur sukses -->
 <div id="popup">
     <div id="popup-content">
-        <p id="countdown">Mengarahkan dalam 5 detik...</p>
+        <p id="countdown">Selamat! Anda akan masuk dalam 5 detik...</p>
+    </div>
+</div>
+
+<!-- Pop-up untuk kesalahan -->
+<div id="wrong-popup">
+    <div id="wrong-popup-content">
+        <p id="wrong-countdown">Anda memilih warna yang salah. Coba lagi dalam 10 detik...</p>
     </div>
 </div>
 

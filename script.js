@@ -1,39 +1,48 @@
-// Daftar warna yang digunakan
 const colors = ['black', 'blue', 'gray', 'red', 'yellow', 'green'];
+let correctColor = '';
+let previousColor = '';
 
-// Memilih warna target secara acak
-const randomIndex = Math.floor(Math.random() * colors.length);
-const targetColor = colors[randomIndex];
+window.onload = function() {
+    setRandomColor();
+};
 
-// Mengubah tampilan warna target di halaman
-document.getElementById('target-color').style.backgroundColor = targetColor;
+function setRandomColor() {
+    do {
+        correctColor = colors[Math.floor(Math.random() * colors.length)];
+    } while (correctColor === previousColor);  // Pastikan warna tidak sama dengan yang sebelumnya
+    previousColor = correctColor;
+    document.getElementById('target-color').style.backgroundColor = correctColor;
+}
 
 function checkColor(selectedColor) {
-    // Periksa apakah warna yang dipilih pengguna sesuai dengan warna target
-    if (selectedColor === targetColor) {
-        // Jika pilihan benar, mulai hitungan mundur
-        startCountdown();  
+    if (selectedColor === correctColor) {
+        showPopup('popup', 5, 'beranda/index.html');
     } else {
-        alert("Verifikasi gagal! Silakan coba lagi.");
+        showPopup('wrong-popup', 10, null, true); // Menampilkan pop-up kesalahan dengan hitungan mundur 10 detik
     }
 }
 
-function startCountdown() {
-    let countdown = 5; // Mulai dari 5 detik
-    const countdownElement = document.getElementById('countdown');
-    
-    // Tampilkan pop-up
-    const popup = document.getElementById('popup');
-    popup.style.display = 'flex'; // Menampilkan pop-up hanya setelah warna benar dipilih
+function showPopup(popupId, countdownTime, redirectUrl, isRetry = false) {
+    let countdownElement = isRetry ? document.getElementById('wrong-countdown') : document.getElementById('countdown');
+    let popup = document.getElementById(popupId);
+    let timeLeft = countdownTime;
+    popup.style.display = 'flex';
 
-    // Fungsi hitungan mundur
-    const interval = setInterval(() => {
-        countdown--;
-        countdownElement.textContent = `Mengarahkan dalam ${countdown} detik...`;
+    let countdownInterval = setInterval(function() {
+        countdownElement.textContent = isRetry
+            ? `Anda memilih warna yang salah. Coba lagi dalam ${timeLeft} detik...`
+            : `Selamat! Anda akan masuk dalam ${timeLeft} detik...`;
 
-        if (countdown === 0) {
-            clearInterval(interval);
-            window.location.href = "beranda/index.html"; // Arahkan ke URL tujuan
+        timeLeft--;
+
+        if (timeLeft < 0) {
+            clearInterval(countdownInterval);
+            popup.style.display = 'none';
+            if (isRetry) {
+                setRandomColor(); // Setel warna baru setelah hitungan mundur kesalahan selesai
+            } else if (redirectUrl) {
+                window.location.href = redirectUrl;
+            }
         }
-    }, 1000); // Setiap 1 detik
+    }, 1000);
 }
